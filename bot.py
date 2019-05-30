@@ -5,7 +5,7 @@ import asyncio
 import time
 import os
 
-Client=discord.Client()
+"""Client=discord.Client()
 client =commands.Bot(command_prefix=".")
 @client.event
 async def on_ready():
@@ -15,9 +15,18 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith(".hello"):
-        msg="Hello {0.author.mention} How are you today".format(message)
-        await bot.process_commands(message)
+        msg="Hello (0.author.mention) How are you today".format(message)
+        await client.send_message(message.channel,msg)
     if message.content.startswith(".bye"):
-        msg="Goodbye  {0.author.mention} Hope To See You Again Soon :wave:".format(message)
-        await bot.process_commands(message)
-client.run(os.getenv('TOKEN'))
+        msg="Goodbye  (0.author.mention) Hope To See You Again Soon :wave:".format(message)
+        await client.send_message(message.channel, msg)
+
+client.run(os.getenv('NTgzNjkyMTkyODc1NDEzNTA0.XPADwg.vqb6ptW1RfhaOqsngEW56yNuQnA'))"""
+
+
+client=discord.Client()
+@client.event
+async def on_message(message):
+    print(message.content)
+client.run("NTgzNjkyMTkyODc1NDEzNTA0.XPADwg.vqb6ptW1RfhaOqsngEW56yNuQnA")
+
