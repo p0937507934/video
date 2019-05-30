@@ -16,9 +16,8 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith(".hello"):
         msg="Hello {0.author.mention} How are you today".format(message)
-        await client.send_message(message.channel,msg)
+        await bot.process_commands(message)
     if message.content.startswith(".bye"):
         msg="Goodbye  {0.author.mention} Hope To See You Again Soon :wave:".format(message)
-        await client.send_message(message.channel, msg)
-
+        await bot.process_commands(message)
 client.run(os.getenv('TOKEN'))
